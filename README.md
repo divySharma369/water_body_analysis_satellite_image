@@ -1,14 +1,14 @@
-# 🌍 UNET Water Body Segmentation - PyTorch
+#  UNET Water Body Segmentation - PyTorch
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://waterbodyanalysissatelliteimage.streamlit.app/)
 
 This repository hosts a state-of-the-art **U-Net** deep learning model designed for the precise pixel-wise segmentation of water bodies from satellite imagery. It was built using **PyTorch** and deployed using a highly interactive **Streamlit** user interface.
 
-👉 **[Try the Live Web App Here!](https://waterbodyanalysissatelliteimage.streamlit.app/)**
+-->  **[Try the Live Web App Here!](https://waterbodyanalysissatelliteimage.streamlit.app/)**
 
 ---
 
-## 🧠 Model Architecture Deep Dive: How U-Net Works
+##  Model Architecture Deep Dive: How U-Net Works
 
 The core of this project relies on **U-Net**, a fully convolutional network initially developed for medical image segmentation. Because satellite imagery is structurally similar (requiring dense, localized predictions rather than just single-image classification), U-Net is exceptionally powerful at identifying the boundaries of water features like rivers, lakes, and oceans.
 
@@ -30,7 +30,7 @@ Finally, a `1x1` Convolution maps the final layer down to a single channel (wate
 
 ---
 
-## 🏗️ The Training Process
+##  The Training Process
 The model was trained on the [Satellite Images of Water Bodies](https://www.kaggle.com/datasets/franciscoescobar/satellite-images-of-water-bodies) dataset from Kaggle. 
 
 * **Loss Function**: The training optimizes a combination of **Binary Cross Entropy (BCE)** and **DICE Loss**. While BCE evaluates general pixel classification, DICE Loss mathematically calculates the overlap between our predicted water boundary and the real water boundary. This forces the model to trace exact, crisp edges around lakes and rivers.
@@ -38,7 +38,7 @@ The model was trained on the [Satellite Images of Water Bodies](https://www.kagg
 
 ---
 
-## 🚀 Getting Started Locally
+##  Getting Started Locally
 
 All the code required to run the interactive dashboard is contained in `app.py`. If you want to explore the ONNX transition or train the model from scratch, look inside the `notebooks/` directory.
 
