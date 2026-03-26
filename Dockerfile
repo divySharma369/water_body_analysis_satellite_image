@@ -19,8 +19,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code
 COPY . .
 
-# Expose the Gradio default port
-EXPOSE 7860
+# Expose the Streamlit default port
+EXPOSE 8501
 
-# Command to run the Gradio app
-CMD ["python", "app.py"]
+# Command to run the Streamlit app
+CMD ["streamlit", "run", "app.py", "--server.address=0.0.0.0"]
