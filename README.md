@@ -19,7 +19,7 @@ The journey of an input image begins here. The satellite image is passed through
 * **Purpose**: This acts as a feature extractor. As the image goes deeper, the spatial dimensions shrink, but the number of feature channels (depth) increases. It learns the "What" of the image (e.g., recognizing textures, colors, and the semantic meaning of water boundaries).
 
 ### 2. The Bottleneck
-At the very bottom of the "U", the network reaches its highest level of abstraction. The image is compressed into a highly dense feature map representing the macro-level layout of the satellite image, without much focus on high-resolution spatial details.
+At the very bottom of the "U", the network reaches its highest level of abstraction. The image is compressed into a highly dense feature map representing the macro-level layout of the satellite image, without much focus on high-resolution spatial details..
 
 ### 3. The Decoder (Expansive Path) & Skip Connections
 Once the network understands the context, it must map those features back to the original image dimensions to create a literal map. This is done via **Up-convolutions** (Transposed Convolutions).
