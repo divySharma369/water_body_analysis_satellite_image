@@ -149,7 +149,7 @@ if selected_image is not None and model_loaded:
     
     with col1:
         st.subheader("Original Image")
-        st.image(selected_image, use_column_width=True)
+        st.image(selected_image, use_container_width=True)
         img_array = np.array(selected_image)
         
     with col2:
@@ -158,7 +158,7 @@ if selected_image is not None and model_loaded:
             with st.spinner('Analyzing satellite imagery...'):
                 mask, overlay, water_pct = predict(img_array, session)
                 
-            st.image(overlay, use_column_width=True, caption="Water Overlay (Blue)")
+            st.image(overlay, use_container_width=True, caption="Water Overlay (Blue)")
             
             # Metrics
             st.markdown("---")
@@ -169,7 +169,7 @@ if selected_image is not None and model_loaded:
             
             # Show Raw Mask Toggle
             with st.expander("View Raw Mask"):
-                st.image(mask, use_column_width=True, clamp=True)
+                st.image(mask, use_container_width=True, clamp=True)
                 
     st.markdown('</div>', unsafe_allow_html=True)
 elif not model_loaded:
